@@ -8,7 +8,7 @@ if (!isset($_GET['id'])) {
 }
 
 $id = $_GET['id'];
-$sql = "SELECT * FROM dsn WHERE id = $id";
+$sql = "SELECT * FROM mhs WHERE id = $id";
 $result = $db->query($sql);
 
 if ($result->num_rows == 0) {
@@ -34,10 +34,10 @@ switch ($d['prodi']) {
   <div class="app-content-header">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-6"><h3 class="mb-0">Detail Dosen</h3></div>
+        <div class="col-sm-6"><h3 class="mb-0">Detail Mahasiswa</h3></div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-end">
-            <li class="breadcrumb-item"><a href="./?p=Dosen">Dosen</a></li>
+            <li class="breadcrumb-item"><a href="./?p=Mahasiswa">Mahasiswa</a></li>
             <li class="breadcrumb-item active">Detail</li>
           </ol>
         </div>
@@ -51,21 +51,21 @@ switch ($d['prodi']) {
         <div class="col-12">
           <div class="card shadow-sm border-0">
             <div class="card-header bg-primary text-white">
-              <h5 class="mb-0">Informasi Dosen</h5>
+              <h5 class="mb-0">Informasi Mahasiswa</h5>
             </div>
             <div class="card-body">
               <table class="table table-striped table-bordered align-middle">
-                <tr><th width="200">NIDN</th><td><?= htmlspecialchars($d['nidn']) ?></td></tr>
+                <tr><th width="200">NIM</th><td><?= htmlspecialchars($d['nim']) ?></td></tr>
                 <tr><th>Nama Lengkap</th><td><?= htmlspecialchars($d['nama']) ?></td></tr>
                 <tr><th>Jenis Kelamin</th><td><?= $jk ?></td></tr>
                 <tr><th>Alamat</th><td><?= htmlspecialchars($d['alamat']) ?></td></tr>
                 <tr><th>Program Studi</th><td><?= $prodi ?></td></tr>
               </table>
               <div class="mt-4">
-                <a href="./?p=dosen" class="btn btn-secondary">
+                <a href="./?p=mahasiswa" class="btn btn-secondary">
                   <i class="bi bi-arrow-left"></i> Kembali
                 </a>
-                <a href="./?p=edit-dosen&id=<?= $d['id'] ?>" class="btn btn-warning">
+                <a href="./?p=edit-mahasiswa&id=<?= $d['id'] ?>" class="btn btn-warning">
                   <i class="bi bi-pencil"></i> Edit Data
                 </a>
               </div>

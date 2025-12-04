@@ -12,16 +12,16 @@ if (isset($_POST['cari'])) {
     // filter berdasarkan kategori yang dipilih
     if ($category == "NIP") {
         $data = $db->query("SELECT * FROM pegawai WHERE NIP LIKE '%$keyword%' ");
-    } elseif ($category == "nama") {
-        $data = $db->query("SELECT * FROM pegawai WHERE nama LIKE '%$keyword%' ");
-    } elseif ($category == "jabatan") {
-        $data = $db->query("SELECT * FROM pegawai WHERE jabatan LIKE '%$keyword%' ");
-    } elseif ($category == "gender") {
-        $data = $db->query("SELECT * FROM pegawai WHERE gender LIKE '%$keyword%' ");
+    } elseif ($category == "Nama") {
+        $data = $db->query("SELECT * FROM pegawai WHERE Nama LIKE '%$keyword%' ");
+    } elseif ($category == "Jabatan") {
+        $data = $db->query("SELECT * FROM pegawai WHERE Jabatan LIKE '%$keyword%' ");
+    } elseif ($category == "Gender") {
+        $data = $db->query("SELECT * FROM pegawai WHERE Gender LIKE '%$keyword%' ");
     } elseif ($category == "Nomor_Telepon") {
         $data = $db->query("SELECT * FROM pegawai WHERE Nomor_Telepon LIKE '%$keyword%' ");
-    } elseif ($category == "email") {
-        $data = $db->query("SELECT * FROM pegawai WHERE email LIKE '%$keyword%' ");
+    } elseif ($category == "Email") {
+        $data = $db->query("SELECT * FROM pegawai WHERE Email LIKE '%$keyword%' ");
     }
 }
 ?>
@@ -60,11 +60,11 @@ if (isset($_POST['cari'])) {
                       <select name="category" class="form-select form-select-sm ms-2">
                         <option value="" <?php if ($category == '') echo "selected"; ?>>Pilih Category</option>
                         <option value="NIP" <?php if ($category == "NIP") echo "selected"; ?>>NIP</option>
-                        <option value="nama" <?php if ($category == "nama") echo "selected"; ?>>Nama</option>
-                        <option value="jabatan" <?php if ($category == "jabatan") echo "selected"; ?>>Jabatan</option>
-                        <option value="gender" <?php if ($category == "gender") echo "selected"; ?>>Gender</option>
+                        <option value="Nama" <?php if ($category == "Nama") echo "selected"; ?>>Nama</option>
+                        <option value="Jabatan" <?php if ($category == "Jabatan") echo "selected"; ?>>Jabatan</option>
+                        <option value="Gender" <?php if ($category == "Gender") echo "selected"; ?>>Gender</option>
                         <option value="Nomor_Telepon" <?php if ($category == "Nomor_Telepon") echo "selected"; ?>>Nomor Telepon</option>
-                        <option value="email" <?php if ($category == "email") echo "selected"; ?>>Email</option>
+                        <option value="Email" <?php if ($category == "Email") echo "selected"; ?>>Email</option>
                       </select>
                   </td>
                   <td>

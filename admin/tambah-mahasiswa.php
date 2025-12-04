@@ -10,8 +10,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $gender = $_POST['gender'];
     $alamat = $_POST['alamat'];
     $prodi = $_POST['prodi'];
+    $waktu = date("Y-m-d H:i:s");
 
-    $sql = "INSERT INTO mhs (nim, nama, gender, alamat, prodi) VALUES ('$nim', '$nama', '$gender', '$alamat', '$prodi')";
+    $sql = "INSERT INTO mhs (nim, nama, gender, alamat, prodi, waktu) VALUES ('$nim', '$nama', '$gender', '$alamat', '$prodi', '$waktu')";
     if ($db->query($sql)) {
         echo "<script>alert('Data berhasil disimpan!');window.location='?p=mahasiswa';</script>";
     } else {
@@ -99,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </table>
 
                 <div class="mt-3 text-end">
-                  <button type="submit" class="btn btn-primary px-4">Simpan</button>
+                  <button type="submit" value ="Simpan" class="btn btn-primary px-4">Simpan</button>
                   <a href="?p=mahasiswa" class="btn btn-secondary px-4 ms-2">Batal</a>
                 </div>
               </form>

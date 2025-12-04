@@ -74,6 +74,7 @@ $data = $db->query($sql);
                     <option value="nim" <?= $category=="nim"?"selected":""; ?>>NIM</option>
                     <option value="nama" <?= $category=="nama"?"selected":""; ?>>Nama</option>
                     <option value="gender" <?= $category=="gender"?"selected":""; ?>>Jenis Kelamin</option>
+                    <option value="alamat" <?= $category=="alamat"?"selected":""; ?>>Alamat</option>
                     <option value="prodi" <?= $category=="prodi"?"selected":""; ?>>Prodi</option>
                   </select>
                   <input type="submit" name="cari" value="Search" class="btn btn-primary">
@@ -106,9 +107,10 @@ $data = $db->query($sql);
                       <th>No</th>
                       <th>NIM</th>
                       <th>Nama</th>
-                      <th>Prodi</th>
                       <th>Jenis Kelamin</th>
                       <th>Alamat</th>
+                      <th>Prodi</th>
+                  
                       <th style="text-align:center;">Opsi</th>
                     </tr>
                   </thead>
@@ -134,9 +136,9 @@ $data = $db->query($sql);
                         <td class="text-center"><?= $no++ ?></td>
                         <td><?= $d['nim'] ?></td>
                         <td><?= $d['nama'] ?></td>
-                        <td><?= $prodi ?></td>
                         <td><?= $gender ?></td>
                         <td><?= $d['alamat'] ?></td>
+                        <td><?= $prodi ?></td>
                         <td class="text-center">
                           <a href="./?p=detail-mahasiswa&id=<?= $d['id'] ?>" class="btn btn-primary btn-sm">
                             <i class="bi bi-eye"></i> Detail

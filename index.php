@@ -1,12 +1,13 @@
-<?php               
-error_reporting(0);              // aktifkan sementara saat debugging
+<?php
+error_reporting(0);
+
 ?>
 <!doctype html>
 <html lang="en">
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Login | siakad</title>
+    <title>AdminLTE 4 | Login Page</title>
     <!--begin::Accessibility Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <meta name="color-scheme" content="light dark" />
@@ -63,51 +64,19 @@ error_reporting(0);              // aktifkan sementara saat debugging
   <body class="login-page bg-body-secondary">
     <div class="login-box">
       <div class="login-logo">
-        <a href="../index2.html"><b>Siakad</b>UIN</a>
+        <a href="./"><b>SIAKAD</b></a>
       </div>
       <!-- /.login-logo -->
       <div class="card">
         <div class="card-body login-card-body">
-          <?php
-          if($_POST['btnLogin']){
-            $tuser = $_POST['tuser'];
-            $tpass = $_POST['tpass'];
-            // if($user=="admin" AND $pass=="admin"){
-            //   $_SESSION['admin']=$user;
-            //   echo"<script>document.location.href='index.php';</script>";
-            // }else{
-            //   echo"<div class='alert alert-danger'>Login Gagal !!</div>";
-            // }
-            require_once("config.php");
-            $sql="SELECT *FROM users WHERE username='$tuser' AND password=MD5('$tpass')";
-            $hasil=$db->query($sql);
-            $level=$hasil->fetch_array();
-            $jml=$hasil->num_rows;
-            if($jml > 0){
-                session_start();
-                $_SESSION['isLogin']=true; 
-                $_SESSION['user']=$tuser;
-                $_SESSION['level']=$level['level'];
-                if ($_SESSION['level']=="admin"){
-                    header("Location:admin/");
-                }elseif($_SESSION['level']=="dosen"){
-                    header("Location:Dosen/");
-                }elseif($_SESSION['level']=="mhs"){
-                    header("Location:Mahasiswa/"); 
-                }
-          }else{
-              echo"<div class='alert alert-danger alert-dismissible'>Username atau Password Salah!</div>";
-          }
-        }
-
-          ?>
-          <form action="#" method="post">
+          
+          <form action="proses_login.php" method="post">
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Username" name="tuser" required/>
-              <div class="input-group-text"><span class="bi bi-persoon"></span></div>
+              <input type="text" class="form-control" placeholder="Username" name="username" required/>
+              <div class="input-group-text"><span class="bi bi-people"></span></div>
             </div>
             <div class="input-group mb-3">
-              <input type="password" class="form-control" placeholder="Password" name="tpass" required/>
+              <input type="password" class="form-control" placeholder="Password" name="password" required/>
               <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
             </div>
             <!--begin::Row-->
@@ -121,7 +90,7 @@ error_reporting(0);              // aktifkan sementara saat debugging
               <!-- /.col -->
               <div class="col-4">
                 <div class="d-grid gap-2">
-                  <input type="submit" class="btn btn-primary" value="sign in" name="btnLogin"/>
+                  <input type="submit" class="btn btn-primary" value="Sign In" name="btnLogin"/>
                 </div>
               </div>
               <!-- /.col -->

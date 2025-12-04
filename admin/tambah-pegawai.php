@@ -1,3 +1,9 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+require_once "../config.php";
+?>
 <main class="app-main">
   <!--begin::App Content Header-->
   <div class="app-content-header">
@@ -5,6 +11,11 @@
       <div class="row">
         <div class="col-sm-6">
           <h3 class="mb-0">Tambah Pegawai</h3>
+          </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-end">
+            <li class="breadcrumb-item"><a href="./?p=pegawai">pegawai</a></li>
+            <li class="breadcrumb-item active">Tambah</li>
         </div>
       </div>
     </div>
@@ -38,20 +49,20 @@
                 require_once "../config.php";
 
                 if (isset($_POST['simpan'])) {
-                    $nip      = $_POST['nip'];
-                    $nama     = $_POST['nama'];
-                    $jabatan  = $_POST['jabatan'];
-                    $gender   = $_POST['gender'] ?? '';
-                    $telepon  = $_POST['telepon'];
-                    $email    = $_POST['email'];
+                    $NIP     = $_POST['NIP'];
+                    $Nama     = $_POST['Nama'];
+                    $Jabatan  = $_POST['Jabatan'];
+                    $Gender   = $_POST['Gender'] ?? '';
+                    $Telepon  = $_POST['Telepon'];
+                    $Email    = $_POST['Email'];
                     $waktu    = date("Y-m-d H:i:s");
 
-                    if ($nip == '' || $nama == '' || $jabatan == '' || $gender == '' || $telepon == '' || $email == '') {
+                    if ($NIP == '' || $Nama == '' || $Jabatan == '' || $Gender == '' || $Telepon == '' || $Email == '') {
                         echo "<div class='alert alert-danger mt-3'>Semua field wajib diisi!</div>";
                     } else {
-                        $sql = "INSERT INTO pegawai (nip, nama, jabatan, gender, nomor_telepon, email, waktu)
-                                VALUES ('$nip', '$nama', '$jabatan', '$gender', '$telepon', '$email', '$waktu')";
-                        $simpan = $db->query($sql);
+                        $sql = "INSERT INTO pegawai (NIP, Nama, Jabatan, Gender, Telepon, Email, waktu)
+                                VALUES ('$NIP', '$Nama', '$Jabatan', '$Gender', '$Telepon', '$Email', '$waktu')";
+            
 
                         if ($simpan) {
                             echo "<div class='alert alert-success mt-3'>
@@ -69,41 +80,41 @@
                   <table class="table table-borderless" style="width:500px;">
                     <tr>
                       <td>NIP</td>
-                      <td><input type="text" name="nip" class="form-control" value="<?= @$nip ?>"></td>
+                      <td><input type="text" name="NIP" class="form-control" value="<?= @$NIP ?>"></td>
                     </tr>
                     <tr>
                       <td>Nama Lengkap</td>
-                      <td><input type="text" name="nama" class="form-control" value="<?= @$nama ?>"></td>
+                      <td><input type="text" name="Nama" class="form-control" value="<?= @$Nama ?>"></td>
                     </tr>
                     <tr>
                       <td>Jabatan</td>
                       <td>
-                        <select class="form-control" name="jabatan">
+                        <select class="form-control" name="Jabatan">
                           <option value="">-- Pilih Jabatan --</option>
-                          <option value="Manager" <?= ($jabatan == "Manager") ? "selected" : "" ?>>Manager</option>
-                          <option value="Staff" <?= ($jabatan == "Staff") ? "selected" : "" ?>>Staff</option>
-                          <option value="Admin" <?= ($jabatan == "Admin") ? "selected" : "" ?>>Admin</option>
-                          <option value="HRD" <?= ($jabatan == "HRD") ? "selected" : "" ?>>HRD</option>
-                          <option value="Keuangan" <?= ($jabatan == "Keuangan") ? "selected" : "" ?>>Keuangan</option>
+                          <option value="Manager" <?= ($Jabatan == "Manager") ? "selected" : "" ?>>Manager</option>
+                          <option value="Staff" <?= ($Jabatan == "Staff") ? "selected" : "" ?>>Staff</option>
+                          <option value="Admin" <?= ($Jabatan == "Admin") ? "selected" : "" ?>>Admin</option>
+                          <option value="HRD" <?= ($Jabatan == "HRD") ? "selected" : "" ?>>HRD</option>
+                          <option value="Keuangan" <?= ($Jabatan == "Keuangan") ? "selected" : "" ?>>Keuangan</option>
                         </select>
                       </td>
                     </tr>
                     <tr>
                       <td>Jenis Kelamin</td>
                       <td>
-                        <input type="radio" name="gender" value="L" id="L" <?= ($gender == "L") ? "checked" : "" ?>>
+                        <input type="radio" name="Gender" value="L" id="L" <?= ($Gender == "L") ? "checked" : "" ?>>
                         <label for="L">Laki-laki</label>
-                        <input type="radio" name="gender" value="P" id="P" <?= ($gender == "P") ? "checked" : "" ?>>
+                        <input type="radio" name="Gender" value="P" id="P" <?= ($Gender == "P") ? "checked" : "" ?>>
                         <label for="P">Perempuan</label>
                       </td>
                     </tr>
                     <tr>
                       <td>Nomor Telepon</td>
-                      <td><input type="text" name="telepon" class="form-control" value="<?= $telepon ?>"></td>
+                      <td><input type="text" name="Telepon" class="form-control" value="<?= @$Telepon ?>"></td>
                     </tr>
                     <tr>
                       <td>Email</td>
-                      <td><input type="email" name="email" class="form-control" value="<?= $email ?>"></td>
+                      <td><input type="Email" name="Email" class="form-control" value="<?= @$Email ?>"></td>
                     </tr>
                     <tr>
                       <td></td>

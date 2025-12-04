@@ -11,6 +11,10 @@ switch($p){
     case 'tambah-mahasiswa';require_once "tambah-mahasiswa.php";break;
 
     case 'pegawai':require_once "pegawai.php";break;
+    case 'edit-pegawai':require_once "edit-pegawai.php";break;
+    case 'detail-pegawai':require_once "detail-pegawai.php";break;
+    case 'hapus-pegawai':require_once "hapus-pegawai.php";break;
+    case 'tambah-pegawai':require_once "tambah-pegawai.php";break;
 
     case 'edit-dosen' ; require_once "edit-dosen.php";break;
     case 'detail-dosen';require_once "detail-dosen.php";break;

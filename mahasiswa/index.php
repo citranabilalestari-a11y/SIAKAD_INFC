@@ -2,26 +2,23 @@
 error_reporting(0);
 date_default_timezone_set("asia/jakarta");
 
-session_start();
-if($_SESSION['isLogin']!=true or $_SESSION['level']!="mahasiswa"){
-  header("location:../index.php");
-}
+
 ?>
 
-<!DOCTYPE html>
+<!doctype html> 
 <html lang="en">
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Siakad | Citra</title>
+    <title>Siakad Uin Saizu</title>
     <!--begin::Accessibility Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#007bff" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#7999bbff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#8dcccece" media="(prefers-color-scheme: dark)" />
     <!--end::Accessibility Meta Tags-->
     <!--begin::Primary Meta Tags-->
-    <meta name="title" content="Siakad | Citra" />
+    <meta name="title" content="AdminLTE 4 | Theme Customize" />
     <meta name="author" content="ColorlibHQ" />
     <meta
       name="description"
@@ -35,7 +32,7 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="mahasiswa"){
     <!--begin::Accessibility Features-->
     <!-- Skip links will be dynamically added by accessibility.js -->
     <meta name="supported-color-schemes" content="light dark" />
-    <link rel="preload" href="../assets/css/adminlte.css" as="style" />
+    <link rel="preload" href="../assets/css/" as="style" />
     <!--end::Accessibility Features-->
     <!--begin::Fonts-->
     <link
@@ -67,6 +64,7 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="mahasiswa"){
   </head>
   <!--end::Head-->
   <!--begin::Body-->
+  
   <body class="sidebar-expand-lg sidebar-open bg-body-tertiary">
     <!--begin::App Wrapper-->
     <div class="app-wrapper">
@@ -82,6 +80,7 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="mahasiswa"){
               </a>
             </li>
             <li class="nav-item d-none d-md-block"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item d-none d-md-block"><a href="#" class="nav-link">Information</a></li>
             <li class="nav-item d-none d-md-block"><a href="#" class="nav-link">Contact</a></li>
           </ul>
           <!--end::Start Navbar Links-->
@@ -187,10 +186,10 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="mahasiswa"){
             <li class="nav-item dropdown">
               <a class="nav-link" data-bs-toggle="dropdown" href="#">
                 <i class="bi bi-bell-fill"></i>
-                <span class="navbar-badge badge text-bg-warning">15</span>
+                <span class="navbar-badge badge text-bg-warning">7</span>
               </a>
               <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
-                <span class="dropdown-item dropdown-header">15 Notifications</span>
+                <span class="dropdown-item dropdown-header">7 Notifications</span>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item">
                   <i class="bi bi-envelope me-2"></i> 4 new messages
@@ -223,9 +222,9 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="mahasiswa"){
             <li class="nav-item dropdown user-menu">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <img
-                  src="../assets/img/user2-160x160.jpg"
+                  src="../assets/img/logouin.jpg"
                   class="user-image rounded-circle shadow"
-                  alt="User Image"
+                  alt="logouin"
                 />
                 <span class="d-none d-md-inline">Citra Nabila</span>
               </a>
@@ -233,13 +232,13 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="mahasiswa"){
                 <!--begin::User Image-->
                 <li class="user-header text-bg-primary">
                   <img
-                    src="../assets/img/user2-160x160.jpg"
+                    src="../assets/img/logouin.jpg"
                     class="rounded-circle shadow"
-                    alt="User Image"
+                    alt="logouin"
                   />
                   <p>
-                    Alexander Pierce - Web Developer
-                    <small>Member since Nov. 2023</small>
+                    Silviana - Mahasiswa
+                    <small>Member since Nov. 2024</small>
                   </p>
                 </li>
                 <!--end::User Image-->
@@ -257,7 +256,7 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="mahasiswa"){
                 <!--begin::Menu Footer-->
                 <li class="user-footer">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
-                  <a href="#" class="btn btn-default btn-flat float-end">Sign out</a>
+                  <a href="../logout.php" class="btn btn-default btn-flat float-end">Sign out</a>
                 </li>
                 <!--end::Menu Footer-->
               </ul>
@@ -270,20 +269,20 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="mahasiswa"){
       </nav>
       <!--end::Header-->
       <!--begin::Sidebar-->
-      <aside class="app-sidebar bg-primary-subtle" data-bs-theme="dark">
+      <aside class="app-sidebar bg-primary shadow" data-bs-theme="dark">
         <!--begin::Sidebar Brand-->
         <div class="sidebar-brand">
           <!--begin::Brand Link-->
-          <a href="../index.html" class="brand-link">
+          <a href="../assets/index.html" class="brand-link">
             <!--begin::Brand Image-->
             <img
-              src="../assets/img/LOGOUIN.png"
-              alt="LOGOUIN"
+              src="../assets/img/logouin.jpg"
+              alt="logouin"
               class="brand-image opacity-75 shadow"
             />
             <!--end::Brand Image-->
             <!--begin::Brand Text-->
-            <span class="brand-text fw-light">Siakad</span>
+            <span class="brand-text fw-light">SIAKAD UIN SAIZU</span>
             <!--end::Brand Text-->
           </a>
           <!--end::Brand Link-->
@@ -299,10 +298,15 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="mahasiswa"){
               role="menu"
               data-accordion="false"
             >
-              <li class="nav-header">Dashboard</li>
-
+              <li class="nav-header">MENU UTAMA</li>
               <li class="nav-item">
-                <a href="./?p=Dosen" class="nav-link">
+                <a href="./?p=dashboard.php" class="nav-link">
+                  <i class="nav-icon bi bi-circle-fill"></i>
+                  <p>Beranda</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./?p=dosen" class="nav-link">
                   <i class="nav-icon bi bi-circle-fill"></i>
                   <p>Dosen</p>
                 </a>
@@ -311,23 +315,43 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="mahasiswa"){
                 <a href="./?p=mahasiswa" class="nav-link">
                   <i class="nav-icon bi bi-circle-fill"></i>
                   <p>Mahasiswa</p>
-                  </a>
+                </a>
               </li>
               <li class="nav-item">
                 <a href="./?p=gantipwd" class="nav-link">
                   <i class="nav-icon bi bi-circle-fill"></i>
-                  <p>Ganti Password</p>
- 
-                </a>
+                <p>Ganti Password</p>
+               </a>
               </li>
               <li class="nav-item">
-                <a href="./?p=Pegawai" class="nav-link">
-                  <i class="nav-icon bi bi-circle-fill"></i>
-                  <p>Pegawai</p>
-
-                </a>
-              </li>
-            </ul>
+                  <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-record-circle-fill"></i>
+                  <p>
+                        pegawai 
+                        <i class="nav-arrow bi bi-chevron-right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">
+                          <i class="nav-icon bi bi-record-circle-fill"></i>
+                          <p>LEVEL</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">
+                          <i class="nav-icon bi bi-record-circle-fill"></i>
+                          <p>LEVEL</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">
+                          <i class="nav-icon bi bi-record-circle-fill"></i>
+                          <p>LEVEL</p>
+                        </a>
+                      </li>
+                    </ul>
+                  
             <!--end::Sidebar Menu-->
           </nav>
         </div>
@@ -335,9 +359,7 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="mahasiswa"){
       </aside>
       <!--end::Sidebar-->
       <!--begin::App Main-->
-    
-      <?php require_once "route.php"; ?>
-
+      <?php require_once "../admin/route.php"; ?>
       <!--end::App Main-->
       <!--begin::Footer-->
       <footer class="app-footer">
@@ -346,8 +368,8 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="mahasiswa"){
         <!--end::To the end-->
         <!--begin::Copyright-->
         <strong>
-          Copyright &copy; 2014-2025&nbsp;
-          <a href="https://adminlte.io" class="text-decoration-none">AdminLTE.io</a>.
+          Copyright &copy; 2020-2025&nbsp;
+          <a href="https://SIAKAD UIN SAIZU PURWOKERTO" class="text-decoration-none">SIAKAD UIN SAIZU PURWOKERTO</a>.
         </strong>
         All rights reserved.
         <!--end::Copyright-->
@@ -396,201 +418,7 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="mahasiswa"){
     </script>
     <!--end::OverlayScrollbars Configure-->
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const appSidebar = document.querySelector('.app-sidebar');
-        const sidebarColorModes = document.querySelector('#sidebar-color-modes');
-        const sidebarColor = document.querySelector('#sidebar-color');
-        const sidebarColorCode = document.querySelector('#sidebar-color-code');
 
-        const themeBg = [
-          'bg-primary',
-          'bg-primary-subtle',
-          'bg-secondary',
-          'bg-secondary-subtle',
-          'bg-success',
-          'bg-success-subtle',
-          'bg-danger',
-          'bg-danger-subtle',
-          'bg-warning',
-          'bg-warning-subtle',
-          'bg-info',
-          'bg-info-subtle',
-          'bg-light',
-          'bg-light-subtle',
-          'bg-dark',
-          'bg-dark-subtle',
-          'bg-body-secondary',
-          'bg-body-tertiary',
-          'bg-body',
-          'bg-black',
-          'bg-white',
-          'bg-transparent',
-        ];
-
-        // loop through each option themeBg array
-        document.querySelector('#sidebar-color').innerHTML = themeBg.map((bg) => {
-          // return option element with value and text
-          return <option value="${bg}" class="text-${bg}">${bg}</option>;
-        });
-
-        let sidebarColorMode = '';
-        let sidebarBg = '';
-
-        function updateSidebar() {
-          appSidebar.setAttribute('data-bs-theme', sidebarColorMode);
-
-          sidebarColorCode.innerHTML = <pre><code class="language-html">&lt;aside class="app-sidebar ${sidebarBg}" data-bs-theme="${sidebarColorMode}"&gt;...&lt;/aside&gt;</code></pre>;
-        }
-
-        sidebarColorModes.addEventListener('input', (event) => {
-          sidebarColorMode = event.target.value;
-          updateSidebar();
-        });
-
-        sidebarColor.addEventListener('input', (event) => {
-          sidebarBg = event.target.value;
-
-          themeBg.forEach((className) => {
-            appSidebar.classList.remove(className);
-          });
-
-          if (themeBg.includes(sidebarBg)) {
-            appSidebar.classList.add(sidebarBg);
-          }
-
-          updateSidebar();
-        });
-      });
-
-      document.addEventListener('DOMContentLoaded', () => {
-        const appNavbar = document.querySelector('.app-header');
-        const navbarColorModes = document.querySelector('#navbar-color-modes');
-        const navbarColor = document.querySelector('#navbar-color');
-        const navbarColorCode = document.querySelector('#navbar-color-code');
-
-        const themeBg = [
-          'bg-primary',
-          'bg-primary-subtle',
-          'bg-secondary',
-          'bg-secondary-subtle',
-          'bg-success',
-          'bg-success-subtle',
-          'bg-danger',
-          'bg-danger-subtle',
-          'bg-warning',
-          'bg-warning-subtle',
-          'bg-info',
-          'bg-info-subtle',
-          'bg-light',
-          'bg-light-subtle',
-          'bg-dark',
-          'bg-dark-subtle',
-          'bg-body-secondary',
-          'bg-body-tertiary',
-          'bg-body',
-          'bg-black',
-          'bg-white',
-          'bg-transparent',
-        ];
-
-        // loop through each option themeBg array
-        document.querySelector('#navbar-color').innerHTML = themeBg.map((bg) => {
-          // return option element with value and text
-          return <option value="${bg}" class="text-${bg}">${bg}</option>;
-        });
-
-        let navbarColorMode = '';
-        let navbarBg = '';
-
-        function updateNavbar() {
-          appNavbar.setAttribute('data-bs-theme', navbarColorMode);
-          navbarColorCode.innerHTML = <pre><code class="language-html">&lt;nav class="app-header navbar navbar-expand ${navbarBg}" data-bs-theme="${navbarColorMode}"&gt;...&lt;/nav&gt;</code></pre>;
-        }
-
-        navbarColorModes.addEventListener('input', (event) => {
-          navbarColorMode = event.target.value;
-          updateNavbar();
-        });
-
-        navbarColor.addEventListener('input', (event) => {
-          navbarBg = event.target.value;
-
-          themeBg.forEach((className) => {
-            appNavbar.classList.remove(className);
-          });
-
-          if (themeBg.includes(navbarBg)) {
-            appNavbar.classList.add(navbarBg);
-          }
-
-          updateNavbar();
-        });
-      });
-
-      document.addEventListener('DOMContentLoaded', () => {
-        const appFooter = document.querySelector('.app-footer');
-        const footerColorModes = document.querySelector('#footer-color-modes');
-        const footerColor = document.querySelector('#footer-color');
-        const footerColorCode = document.querySelector('#footer-color-code');
-
-        const themeBg = [
-          'bg-primary',
-          'bg-primary-subtle',
-          'bg-secondary',
-          'bg-secondary-subtle',
-          'bg-success',
-          'bg-success-subtle',
-          'bg-danger',
-          'bg-danger-subtle',
-          'bg-warning',
-          'bg-warning-subtle',
-          'bg-info',
-          'bg-info-subtle',
-          'bg-light',
-          'bg-light-subtle',
-          'bg-dark',
-          'bg-dark-subtle',
-          'bg-body-secondary',
-          'bg-body-tertiary',
-          'bg-body',
-          'bg-black',
-          'bg-white',
-          'bg-transparent',
-        ];
-
-        // loop through each option themeBg array
-        document.querySelector('#footer-color').innerHTML = themeBg.map((bg) => {
-          // return option element with value and text
-          return <option value="${bg}" class="text-${bg}">${bg}</option>;
-        });
-
-        let footerColorMode = '';
-        let footerBg = '';
-
-        function updateFooter() {
-          appFooter.setAttribute('data-bs-theme', footerColorMode);
-          footerColorCode.innerHTML = <pre><code class="language-html">&lt;footer class="app-footer ${footerBg}" data-bs-theme="${footerColorMode}"&gt;...&lt;/footer&gt;</code></pre>;
-        }
-
-        footerColorModes.addEventListener('input', (event) => {
-          footerColorMode = event.target.value;
-          updateFooter();
-        });
-
-        footerColor.addEventListener('input', (event) => {
-          footerBg = event.target.value;
-
-          themeBg.forEach((className) => {
-            appFooter.classList.remove(className);
-          });
-
-          if (themeBg.includes(footerBg)) {
-            appFooter.classList.add(footerBg);
-          }
-
-          updateFooter();
-        });
-      });
     </script>
     <!--end::Script-->
   </body>

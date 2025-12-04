@@ -225,22 +225,22 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="admin"){
             <li class="nav-item dropdown user-menu">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <img
-                  src="../assets/img/logouin.jpg"
+                  src="../assets/img/LOGOUIN.png"
                   class="user-image rounded-circle shadow"
-                  alt="logouin"
+                  alt="LOGOUIN"
                 />
-                <span class="d-none d-md-inline">Silviana</span>
+                <span class="d-none d-md-inline">Citra Nabila</span>
               </a>
               <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                 <!--begin::User Image-->
                 <li class="user-header text-bg-primary">
                   <img
-                    src="../assets/img/logouin.jpg"
-                    class="rounded-circle shadow"
-                    alt="logouin"
+                    src="../assets/img/LOGOUIN.png"
+                    class="user-image rounded-circle shadow"
+                    alt="LOGOUIN"
                   />
                   <p>
-                    Silviana - Mahasiswa
+                    Citra Nabila - Mahasiswa
                     <small>Member since Nov. 2024</small>
                   </p>
                 </li>
@@ -279,8 +279,8 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="admin"){
           <a href="../assets/index.html" class="brand-link">
             <!--begin::Brand Image-->
             <img
-              src="../assets/img/logouin.jpg"
-              alt="logouin"
+              src="../assets/img/LOGOUIN.png"
+              alt="LOGOUIN"
               class="brand-image opacity-75 shadow"
             />
             <!--end::Brand Image-->
@@ -321,39 +321,18 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="admin"){
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./?p=gantipwd" class="nav-link">
+                <a href="./?p=gantipaswoard" class="nav-link">
                   <i class="nav-icon bi bi-circle-fill"></i>
                 <p>Ganti Password</p>
                </a>
               </li>
               <li class="nav-item">
-                  <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-record-circle-fill"></i>
-                  <p>
-                        pegawai 
-                        <i class="nav-arrow bi bi-chevron-right"></i>
-                      </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                          <i class="nav-icon bi bi-record-circle-fill"></i>
-                          <p>LEVEL</p>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                          <i class="nav-icon bi bi-record-circle-fill"></i>
-                          <p>LEVEL</p>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                          <i class="nav-icon bi bi-record-circle-fill"></i>
-                          <p>LEVEL</p>
-                        </a>
-                      </li>
-                    </ul>
+                <a href="./?p=pegawai" class="nav-link">
+                  <i class="nav-icon bi bi-circle-fill"></i>
+                  <p>Pegawai</p>
+                </a>
+              </li>
+                      
                   
             <!--end::Sidebar Menu-->
           </nav>
