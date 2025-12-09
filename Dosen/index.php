@@ -3,7 +3,7 @@ error_reporting(0);
 date_default_timezone_set("asia/jakarta");
 
 session_start();
-if($_SESSION['isLogin']!=true or $_SESSION['level']!="dosen"){
+if($_SESSION['isLogin']!=true or $_SESSION['level']!="dsn"){
   header("location:../index.php");
 }
 ?>
