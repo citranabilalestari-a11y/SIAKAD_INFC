@@ -2,8 +2,14 @@
 error_reporting(0);
 date_default_timezone_set("asia/jakarta");
 
-
+session_start();
+if($_SESSION['isLogin']!=true or $_SESSION['level']!="dosen"){
+  header("location:../index.php");
+}
 ?>
+
+
+
 
 <!doctype html> 
 <html lang="en">
@@ -418,7 +424,6 @@ date_default_timezone_set("asia/jakarta");
     </script>
     <!--end::OverlayScrollbars Configure-->
     <script>
-
     </script>
     <!--end::Script-->
   </body>
