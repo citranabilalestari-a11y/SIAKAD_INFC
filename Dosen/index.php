@@ -3,7 +3,7 @@ error_reporting(0);
 date_default_timezone_set("asia/jakarta");
 
 session_start();
-if($_SESSION['isLogin']!=true or $_SESSION['level']!="admin"){
+if($_SESSION['isLogin']!=true or $_SESSION['level']!="dsn"){
   header("location:../index.php");
 }
 ?>
@@ -225,9 +225,9 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="admin"){
             <li class="nav-item dropdown user-menu">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <img
-                  src="../assets/img/logouin.jpg"
+                  src="../assets/img/LOGOUIN.png"
                   class="user-image rounded-circle shadow"
-                  alt="logouin"
+                  alt="LOGOUIN"
                 />
                 <span class="d-none d-md-inline">Citra Nabila</span>
               </a>
@@ -235,9 +235,9 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="admin"){
                 <!--begin::User Image-->
                 <li class="user-header text-bg-primary">
                   <img
-                    src="../assets/img/logouin.jpg"
-                    class="rounded-circle shadow"
-                    alt="logouin"
+                    src="../assets/img/LOGOUIN.png"
+                    class="user-image rounded-circle shadow"
+                    alt="LOGOUIN"
                   />
                   <p>
                     Citra Nabila - Mahasiswa
@@ -279,8 +279,8 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="admin"){
           <a href="../assets/index.html" class="brand-link">
             <!--begin::Brand Image-->
             <img
-              src="../assets/img/logouin.jpg"
-              alt="logouin"
+              src="../assets/img/LOGOUIN.png"
+              alt="LOGOUIN"
               class="brand-image opacity-75 shadow"
             />
             <!--end::Brand Image-->
@@ -321,7 +321,7 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="admin"){
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./?p=gantipwd" class="nav-link">
+                <a href="./?p=gantipaswoard" class="nav-link">
                   <i class="nav-icon bi bi-circle-fill"></i>
                 <p>Ganti Password</p>
                </a>
@@ -341,7 +341,7 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="admin"){
       </aside>
       <!--end::Sidebar-->
       <!--begin::App Main-->
-      <?php require_once "route.php"; ?>
+      <?php require_once "../admin/route.php"; ?>
       <!--end::App Main-->
       <!--begin::Footer-->
       <footer class="app-footer">
