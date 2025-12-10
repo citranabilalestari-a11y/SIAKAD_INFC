@@ -8,9 +8,6 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="mhs"){
 }
 ?>
 
-
-
-
 <!doctype html> 
 <html lang="en">
   <!--begin::Head-->
@@ -243,7 +240,7 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="mhs"){
                     alt="logouin"
                   />
                   <p>
-                    Silviana - Mahasiswa
+                    Citra Nabila - Mahasiswa
                     <small>Member since Nov. 2024</small>
                   </p>
                 </li>
@@ -330,33 +327,12 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="mhs"){
                </a>
               </li>
               <li class="nav-item">
-                  <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-record-circle-fill"></i>
-                  <p>
-                        pegawai 
-                        <i class="nav-arrow bi bi-chevron-right"></i>
-                      </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                          <i class="nav-icon bi bi-record-circle-fill"></i>
-                          <p>LEVEL</p>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                          <i class="nav-icon bi bi-record-circle-fill"></i>
-                          <p>LEVEL</p>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                          <i class="nav-icon bi bi-record-circle-fill"></i>
-                          <p>LEVEL</p>
-                        </a>
-                      </li>
-                    </ul>
+                <a href="./?p=pegawai" class="nav-link">
+                  <i class="nav-icon bi bi-circle-fill"></i>
+                  <p>Pegawai</p>
+                </a>
+              </li>
+                      
                   
             <!--end::Sidebar Menu-->
           </nav>
@@ -365,7 +341,7 @@ if($_SESSION['isLogin']!=true or $_SESSION['level']!="mhs"){
       </aside>
       <!--end::Sidebar-->
       <!--begin::App Main-->
-      <?php require_once "../admin/route.php"; ?>
+      <?php require_once "route.php"; ?>
       <!--end::App Main-->
       <!--begin::Footer-->
       <footer class="app-footer">
